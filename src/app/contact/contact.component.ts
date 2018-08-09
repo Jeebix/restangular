@@ -1,15 +1,46 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+    numberToDisplay: string = '';
 
-  ngOnInit() {
-  }
+    standard = {
+        firstName: 'Benjamin',
+        lastName: 'Glouton',
+        role: 'Accueil',
+        award: '',
+        phoneNumber: '02-99-99-99-01'
+    };
+
+    sommelier = {
+        firstName: 'David',
+        lastName: 'Biraud',
+        role: 'Sommelier',
+        award: 'Meilleur ouvrier de France 2002',
+        phoneNumber: '02-99-99-99-98'
+    };
+
+    boucher = {
+        firstName: 'Sébastien',
+        lastName: 'Coirier',
+        role: 'Boucher',
+        award: 'Meilleur ouvrier de France 2015',
+        phoneNumber: '02-99-99-99-97'
+    };
+
+    constructor() { }
+
+    ngOnInit() {
+    }
+    
+    displayBig(telNumber) {
+        console.log(telNumber);
+        this.numberToDisplay = telNumber;
+    }
 
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes, Router } from "@angular/router"; // Pour le routage
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,6 +36,7 @@ import { MainDashComponent } from './main-dash/main-dash.component';
 import { DishTableComponent } from './dish-table/dish-table.component';
 import { QuickLunchService } from './services/quick-lunch.service';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { PhoneComponent } from './phone/phone.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -54,12 +56,14 @@ const routes: Routes = [
         ContactComponent,
         MainDashComponent,
         DishTableComponent,
-        ScheduleComponent
+        ScheduleComponent,
+        PhoneComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         LayoutModule,
+        HttpClientModule,
         MatToolbarModule,
         MatButtonModule,
         MatSidenavModule,

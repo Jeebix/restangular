@@ -1,3 +1,13 @@
 <p>
   contact works!
 </p>
+
+<!-- input parameters pour transmettre objet du composant parent vers enfant -->
+<app-phone [user]="standard" (zoom)="displayBig($event)"></app-phone>
+<hr>
+<!-- output parameter permet d'écouter l'évènement 'zoom' -->
+<app-phone [user]="sommelier" (zoom)="displayBig($event)"></app-phone>
+<hr>
+<app-phone [user]="boucher" (zoom)="displayBig($event)"></app-phone>
+
+<div class="phone" *ngIf="numberToDisplay">{{ numberToDisplay }}</div>
